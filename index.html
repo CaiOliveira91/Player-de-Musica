@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Music</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="top">
+            <span>Cj Music</span>
+        </div>
+        <div class="entreternimento">
+            <!--IMAGEM-->
+            <div class="img-area">
+                <img class="img" src="" alt="">
+            </div>
+            <div class="show">
+                <!--DETALHES DA MUSICA-->
+                <div class="song">
+                    <p class="nome"></p>
+                    <p class="artista"></p>
+                </div>
+                <!--PROGRESSO-->
+                <div class="progress">
+                    
+                    <div class="timer">
+                        <span class="corrertime">0:00</span>
+                        <span class="maxtime"></span>
+                    </div>
+                    <audio id="main-audio" src=""></audio>
+                </div>
+                <!--CONTROLE-->
+                <div class="control">
+                    <span class="repeat" onclick="handleRepeat()"> <ion-icon name="repeat" ></ion-icon></span>
+                    <div class="prev"><ion-icon name="play-back"></ion-icon></div>
+
+                    <div class="play"><i class="material-icons play">play_arrow</i></div>
+                    
+                    <div class="next"><ion-icon name="play-forward"></ion-icon></div>
+                    <!--VOLUME BOX-->
+            <div class="volume-box">
+                <span class="volume-down"><ion-icon name="volume-mute"></ion-icon></ion-icon></span>
+                <input type="range" class="volume-range" step="1" value="80" min="0" max="100"
+                    oninput="audio.volume = this.value/100">
+                <span class="volume-up"> <ion-icon name="volume-high"></ion-icon></span>
+            </div>
+            <!--BTN VOLUME-->
+            <span class="volum" onclick="handleVolume()"><ion-icon name="volume-high"></ion-icon></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

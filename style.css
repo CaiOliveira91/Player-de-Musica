@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+::before, *::after{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(31, 31, 31);
+}
+
+.container{
+    height: 350px;
+    width: 750px;
+    padding: 20px 25px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(black 0% , rgb(128, 128, 128) 90%);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 342);
+}
+
+.container ion-icon {
+    cursor: pointer;
+}
+
+.top{ 
+    margin-left: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+}
+
+.top span{
+    font-size: 30px;
+    margin-left: -3px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px -2px 1px  rgb(255, 255, 255);
+}
+
+
+
+.entreternimento{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*IMAGEM*/
+
+.img-area{
+    margin-left: 10px;
+    height: 90%;
+    width: 310px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgb(255, 255, 255) , 0 0 2px black , 13px 13px 20px black , -10px -10px 20px rgb(133, 133, 133);
+}
+
+.img-area img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.show{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* TITULO E ARTISTA */
+.song{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.song p{
+    color: rgb(255, 255, 255);
+}
+
+.song .nome{
+    font-size: 30px;;
+}
+
+.song .artista{
+    font-size: 20px;
+    opacity: 0.9;
+    line-height: 40px ;
+}
+
+/*PROGRESSO*/
+
+.progress{
+    height: 3px;
+    width: 100%;
+    border-radius: 50px;
+    background: rgba(194, 191, 191, 0.308);
+    cursor: pointer;
+}
+
+.progress .timer{
+    margin-top: 30px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer span{
+    font-size: 17px;
+    color: #ffffff;
+}
+
+/* CONTROLE */
+
+.control{
+    margin: 40px 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control ion-icon{
+    font-size: 30px;
+    user-select: none;
+}
+
+.control ion-icon:hover{
+    color: rgb(54, 53, 53);
+}
+
+.control ion-icons:nth-child(2), .control ion-icons:nth-child(2){
+    font-size: 43px;
+}
+
+.repeat{
+    color: #f2eae4;
+}
+
+.repeat.active{
+    color: #ff3677;
+}
+
+.control #prev{
+    margin-right: -13px;
+    font-size: 38px;
+}
+
+.control #next{
+    margin-left: -13px;
+    font-size: 38px;
+}
+
+.control .play{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 2px black, 8px 8px 8px rgb(34, 34, 34), -3px -3px 15px white;
+}
+
+.play::before{
+    position: absolute;
+    content: '';
+    height: 55px;
+    width: 55px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: inherit;
+}
+
+.play i{
+    margin-left: 5px;
+    color: #f2eae4;
+    font-size: 35px;
+}
+
+
+.play i:hover{
+    color: #5c5c5c;
+}
+
+
+.prev , .next{
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: inherit;
+    border-radius: 50%;
+    box-shadow: 0 0 2px black, 8px 8px 8px rgb(34, 34, 34), -3px -3px 15px white;
+}
+
+.prev ion-icon{
+    margin-right: 4px;
+    color: #f2eae4;
+}
+
+.next ion-icon{
+    margin-left: 4px;
+    color: #f2eae4;
+}
+
+.prev ion-icon:hover{
+    color: #5c5c5c;
+}
+
+.next ion-icon:hover{
+    color: #5c5c5c;
+}
+/* AJUSTE / ALOCAR */
+
+.progress, .header, ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*VOLUME*/
+
+.volum{
+    background: transparent;
+    border: none;
+    color: white;
+    z-index: 5;
+}
+
+.volum:hover{
+    color: rgb(255, 254, 254);
+}
+
+
+.volume-box {
+    display: block;
+    position: absolute;
+    right: -60px;
+    top: 70px;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 0 20px;
+    opacity: 0;
+    transition: 01s;
+}
+
+    .volume-down {
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    .volume-up {
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: white;
+    }
+
+    .volume-up:hover{
+        color: #3f3c3c;
+    }
+    
+    .volume-down:hover{
+        color: #3f3c3c;
+    }
+
+
+    input[type="range"] {
+      height: 5px;
+      width: 250px;
+      margin: 0 0 15px 0;
+    }
+  
+  .volume-box.active {
+    opacity: 1;
+  }
+
+  .music-box {
+    position: absolute;
+    left: 50%;
+    top: 385px;
+    transform: translateX(-50%);
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none !important;
+    margin: 0px;
+    padding: 0px;
+    background: #3f3c3c;
+    height: 5px;
+    width: 150px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+
+  input[type="range"]::-ms-fill-lower {
+    background: #000000;
+  }
+
+  input[type="range"]::-ms-fill-upper {
+    background: #f5f2f0;
+  }
+
+  input[type="range"]::-moz-range-track {
+    border: none;
+    background: #f2eae4;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #fc0050;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    box-shadow: -100vw 0 0 100vw #000000;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    background: #ff3677;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+  }
+
+  input[type="range"]::-ms-thumb {
+    -webkit-appearance: none !important;
+    background: #ff3677;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+  }
+
+  input[type="range"] {
+    height: 5px;
+    width: 220px;
+    margin: 0 0 15px 0;
+  }
+  
+.volume-range {
+  height: 5px;
+  width: 230px;
+  margin: 0 0 10px 0;
+ }
+
+ .volum.active{
+     color: #ff3677;
+ }
+
+
